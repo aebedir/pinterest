@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/hesap.css' %}">
+{% endblock css %}
+
+
+
+{% block content %}
+<div class="container">    
+    <div class="profil-resmi">        
+            {% if not hesap.profilResmi %}
+                <div class="d-flex justify-content-center">
+                    <h1 class="hesap-isim">{{hesap.user}}</h1>
+                </div>
+            {% else %}
+            <div class="text-center">
+                <img class="hesap-profilResmi" src="{{ hesap.profilResmi.url }}" alt="">
+            </div>
+            {% endif %}        
+    </div>
+    <div class="text-center pt-3">
+        <h3>{{hesap.ad}} {{hesap.soyad}}</h3>
+    </div>
+    <div class="text-center">
+        <h6>@{{hesap.user}}</h6>
+    </div>
+    <div class="takip">
+
+    </div>
+      
+    <div class="hesap-button pt-3">
+        {% if request.user == hesap.user %}
+        <button class="btn btn-secondary">Paylaş</button>
+        <button class="btn btn-secondary">Profili düzenle</button>
+        {% else %}
+        <button class="btn btn-secondary">Mesaj</button>
+        <button class="btn btn-danger">Takip et</button>
+        {% endif %}
+    </div>
+    <div class="hesap-kaydedilen pt-5">
+        <a href="{% url 'created' %}">Oluşturuldu</a>
+        <a href="{% url 'saved' %}">Kaydedildi</a>
+    </div>    
+</div>
+
+
+
+
+{% if post|length > 0 %}
+{% for p in post %}
+<img src="{{p.resim.url}}" alt="">
+{% endfor %}
+{% else %}
+<h3>Henüz Pin Eklemediniz</h3>
+{% endif %}
+
+{% endblock content %}
+
+
+

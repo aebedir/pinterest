@@ -28,6 +28,7 @@ urlpatterns = [
     path('login/',userLogin,name='login'),
     path('logout/',userLogout, name='logout'),
     path('hesabım/',hesap,name='hesap'),
+    path('hesap-detay/<int:userId>',hesapDetay,name="hesap-detay"),
     path('pinadd/',pinAdd,name='pinAdd'),
     path('hesap/created/',created,name='created'),
     path('hesap/saved/',saved,name='saved'),

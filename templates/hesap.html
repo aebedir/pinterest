@@ -46,12 +46,9 @@
     </div>    
 </div>
 
-
-
-
 {% if pin|length > 0 %}
 {% for p in pin %}
-
+<img src="{{p.resim.url}}" alt="">
 {% endfor %}
 {% else %}
 <h3>Henüz Pin Eklemediniz</h3>

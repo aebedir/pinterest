@@ -9,9 +9,9 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    pin = Post.objects.all() 
+    pin = Post.objects.all()
     context={
-        'pin':pin        
+        'pin':pin                
     }
     return render (request,'index.html',context)
 
@@ -85,6 +85,17 @@ def hesap(request):
     }
     return render(request,'hesap.html',context)
 
+def hesapDetay(request,userId):
+    hesap = Hesap.objects.get(id=userId)
+    post = Post.objects.filter( olusturan = hesap.user)  
+    if request.user == hesap.user:
+        return redirect('hesap')  
+    context = {        
+        'hesap': hesap,
+        'post':post
+    } 
+    return render(request,'hesap-detay.html',context)
+
 def saved(request):
     pin = Post.objects.filter(olusturan = request.user)
     hesap = Hesap.objects.filter(user=request.user)
@@ -105,11 +116,10 @@ def created(request):
 
 def post(request, postId):    
     post = Post.objects.get(id=postId)
-    user = post.olusturan
-    hesap = Hesap.objects.filter(user=user)
+    hesap = Hesap.objects.get(user = post.olusturan)    
     context = {
         'post': post,
-        'hesap': hesap
+        'hesap':hesap        
     }    
     return render(request, 'detail.html', context)
 

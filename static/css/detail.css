@@ -1,23 +1,43 @@
 .detail{
     border: 1px solid black;
     border-radius: 25px;
-    height: 600px;
+    height: auto;
 }
 .detail-left{
     background-color: rgba(128, 128, 128, 0.2);
     border-radius: 25px 0 0 25px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.detail-left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+    padding: 0;
+    margin: 0;
 }
 .detail-right{    
     border-radius: 0 25px 25px 0;    
 }
+.kaydettiklerim{
+    font-weight: bold;
+}
 .detail-right button{
     padding: 13px 17px;
     border-radius: 25px;
+    margin-left: 15px;
 }
 .detail-profil img{
     border-radius: 50%;
     margin-right: 10px;
 }
 .detail-profil h5{
+    margin: 0;
+}
+.hesap-isim{    
+    border-radius: 50%;
+    padding: 15px;
+    background-color: rgba(128, 128, 128, 0.3);
     margin: 0;
 }
