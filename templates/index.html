@@ -19,15 +19,21 @@
     
 </head>
 <body>    
-    {% include 'includes/_navbar.html' %}
+    {% include 'includes/_Header.html' %}
     
     {% block content %} 
     {% if user.is_authenticated %}
-    <div class="container">
+    
+    <div class="row">
         {% for p in pin %}
-        <a href="{% url 'detay' p.id %}">
-            <img width="150px;" src="{{p.resim.url}}" alt="">
+        <div class="col-2">
+             <a href="{% url 'detay' p.id %}">
+            <div class="card" >
+              <img src="{{p.resim.url}}" class="card-img-top" alt="">
+            </div>
         </a>
+    </div>
+       
         {% endfor %}
          
         

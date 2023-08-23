@@ -6,4 +6,12 @@ body, html {
     background-color: white;
 }
 
-
+.form-control{
+    background-color: rgba(207, 207, 207, 0.46);
+   margin: 0px;
+   
+}
+.card{
+    margin-left: 10px; 
+    margin-bottom: 15px;
+}

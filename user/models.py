@@ -28,7 +28,7 @@ class Kategori(models.Model):
         return self.isim
     
 class Post(models.Model):
-    olusturan = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
+    olusturan = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     kategori = models.ForeignKey(Kategori, on_delete=models.SET_NULL, null=True)
     isim = models.CharField(max_length=100)
     aciklama = RichTextField(max_length=500, null=True)    

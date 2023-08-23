@@ -1,0 +1,91 @@
+{% load static %}
+{% block css %}
+<!-- Navbar CSS -->
+<link rel="stylesheet" href="{% static 'css/_navbar.css' %}">
+{% endblock css %}
+
+<!-- Giriş yapmadan önce görünecek navbar -->
+
+   <!-- Giriş yaptıktan sonra görünecek navbar -->
+   
+   {% if user.is_authenticated %}
+   <div class="menu">
+    <label for="" class="logo" >
+       <a href="">
+         <img src="/static/img/pinterestlogo.jpg"   alt="">
+       </a>
+     </label>
+
+        <button type="button" style="width: 100px; height: 50px;" class="btn btn-dark">Anasayfa</button>
+       
+        <button class="btn btn-light" style="margin-top: 25px; width: 70px; height: 35px; background-color: white;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Oluştur
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Fikir Pini Oluştur</a></li>
+          <li><a class="dropdown-item" href="#">Pin Oluştur</a></li>
+        </ul>
+        <form class="d-flex" role="search">
+       <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <div class="dropdown">
+        <button class="btn">
+          <img class="image" src="/static/img/Ekran görüntüsü 2023-08-18 160455.png" style="width: 40px; height: 45px;" alt="">
+        </button>
+      </div>
+      <div class="dropdown">
+        <button class="btn">
+          <img class="image" src="/static/img/Ekran görüntüsü 2023-08-18 203354.png "  style="width: 50px; height: 45px; margin: 0;" alt="">
+        </button>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" style="background-color: white; border: none; color: rgba(152, 150, 150, 0.963); width: 55px; height: 55px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Hesap ekle</a></li>
+          <li><a class="dropdown-item" href="#">İşletme hesabına geçiş yapın</a></li>
+          <li><a class="dropdown-item" href="#">Ayarlar</a></li>
+          <li><a class="dropdown-item" href="#">Ana sayfa akışınızı ayarlayın</a></li>
+          <li><a class="dropdown-item" href="#">Windows uygulamasını yükle</a></li>
+          <li><a class="dropdown-item" href="#">Gizlilih haklarınız</a></li>
+          <li><a class="dropdown-item" href="#">Yardım alın</a></li>
+          <li><a class="dropdown-item" href="#">Hizmet şartlarına göz at</a></li>
+          <li><a class="dropdown-item" href="#">Gizlilik politikasına göz at</a></li>
+          <li><a class="dropdown-item" href="#">Beta test kullanıcısı olun</a></li>
+          <li><a onclick="exit(event)"  class="dropdown-item" href="{% url 'logout' %}">Çıkış yap</a></li>
+        </ul>
+      </div>
+    </div>
+   <script>
+    function exit(e){
+      if(!confirm('Çıkış Yapmak İstediğinize Emin misin ?')){
+        e.preventDefault();
+      }
+    }  
+  </script>
+   {% else %}
+   <nav>
+    <label for="" class="logo" >
+       <a href="">
+         <img src="/static/img/pinterestlogo.jpg" alt="">
+         <ul><li><h1>Pinterest</h1></li></ul>
+       </a>
+       
+     </label>
+       
+    <ul>
+       <li><a href="">Hakkında</a></li>
+       <li><a href="">İş Dünyası</a></li>
+       <li><a href="">Blog</a></li>
+    </ul>
+    <ul>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end" >
+        <button class="btn btn-danger me-md-2" type="button"><a  href="{% url 'login' %}" style="text-decoration: none;">Oturum Aç</a></button>
+      </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-secondary" type="button"><a  href="{% url 'register' %}" style="text-decoration: none;">Kaydol</a></button>
+      </div>
+    </ul>
+   </nav>
+   {% endif %}
+ 
