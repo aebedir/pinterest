@@ -15,7 +15,7 @@ class Hesap(models.Model):
     ad = models.CharField(max_length=100, null=True)    
     soyad = models.CharField(max_length=100, null=True)
     telefon = models.IntegerField(null=True)  
-    tarih = models.IntegerField(null=True)      
+    tarih = models.TextField(null=True)      
     
 
     def __str__(self):

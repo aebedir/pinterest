@@ -1,17 +1,93 @@
-
 body, html {
     height: 100%;
     margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     background-color: white;
+    box-sizing: border-box;
 }
 
-.form-control{
-    background-color: rgba(207, 207, 207, 0.46);
-   margin: 0px;
-   
+
+.container-fluid{
+    columns: 6;
+    margin:20px auto;
+    column-gap: 45px;
+               
 }
-.card{
-    margin-left: 10px; 
-    margin-bottom: 15px;
+.container-fluid .box{
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+}
+ img{
+    width: 100%;
+}
+/* --------------------------------------------------------------------------- */
+#search,#save,#shop,#bottom{
+    width: 100%;
+    height: 100vh;
+}
+#top{
+    height: 85vh;   
+    position: absolute;
+    top: 0px;
+}
+#search{    
+    position: relative;
+    top: 85vh;
+    z-index: 100;
+    background-image: url(../img/sarı.png);
+    background-position: center;
+    background-size: cover;    
+}
+#save{
+    position: relative;
+    top: 85vh;
+    background-image: url(../img/mavi.png);
+    background-position: center;
+    background-size: cover;
+}
+#shop{
+    background-image: url(../img/pembe.png);
+    background-position: center;
+    background-size: cover;
+}
+#bottom{    
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+    url(../img/background.png); ;
+    
+}
+.top img{
+    width: 200px;
+    margin-right: 15px;
+    z-index: -100;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------- */
+@media(max-width:1200px){
+    .container{
+        width:calc(100%-40px);
+        columns: 3;
+    }
+}
+@media(max-width:768px){
+    .container{
+        
+        columns: 2;
+    }
+}
+@media(max-width:480px){
+    .container{
+        
+        columns: 1;
+    }
 }

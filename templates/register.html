@@ -10,8 +10,13 @@
 <div class="mt-1 mb-1">   
     <div class="login-wrap">
         <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" ><label for="tab-1" class="tab"><a class="active_a" href="{% url 'login' %}">Giriş Yap</a></label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up" checked><label for="tab-2" class="tab"><a class="active_a" href="{% url 'register' %}">Kayıt Ol</a></label>
+            <label for="" style="margin-top: 13px; margin-left: 203px;">
+                <img src="/static/img/pinterestlogo.jpg" class="logo"  alt="">
+            </label>
+            <div class="title">
+            <h3 style="text-align: center;">Pinterest'e Hoş Geldiniz</h3>
+            <p style="color: rgb(96,96,96); text-align: center;">Bir sonraki tutkunuzu keşfedin</p>
+        </div>
             <div class="login-form">
                 <div class="sign-up-htm">
                     <form action="" method="POST">
@@ -19,49 +24,36 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="group">
-                                <label class="label">İsim</label>
-                                <input name="ad" type="text" class="input">
+                                <label class="label">E-posta</label>
+                                <input name="email"  type="email" class="input">
                             </div>
                             <div class="group">
-                                <label class="label">Soyisim</label>
-                                <input name="soyad" type="text" class="input">
+                                <label class="label">Parola</label>
+                                <input name="sifre" type="password" class="input">
                             </div>
                             <div class="group">
-                                <label class="label">Kullanıcı Adı</label>
-                                <input name="kullanici" type="text" class="input">
+                                <label class="label">Doğum tarihi</label>
+                                <input name="date"  type="date" class="input">
                             </div>                           
-                            <div class="group">
-                                <label class="label">Email Adresi</label>
-                                <input name="email" type="email" class="input">
-                            </div>                            
-                        </div>
-                        <div class="col-6">  
-                            <div class="group">
-                                <label class="label">Telefon</label>
-                                <input  name="telefon" type="text" class="input">
-                            </div>                         
-                            <div class="group">
-                                <label class="label">Şifre</label>
-                                <input type="password" name="sifre" class="input" data-type="password">
-                            </div>
-                            <div class="group">
-                                <label class="label">Şifre Tekrar</label>
-                                <input type="password" name="sifre2" class="input" data-type="password">
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="group">
-                        <input type="submit" class="button" value="Kayıt Ol">
-                    </div>                 
-                    </form>                    
-                    <div class="foot-lnk">
-                        <a class="text-white" href="{% url 'login' %}">Hesabınız var mı ?</a>
-                    </div>
+                        <input type="submit" class="button" value="Devam et">
+                    </div>           
+                    <h6 style="margin-left: 235px;">VEYA</h6>
+                    <div class="group" style="margin-left: 113px;">
+                        <input type="submit" class="btn btn-primary" value="Facebook ile Devam Et">
+                    </div>      
+                    </form>            
+                    <div class="yazi">              
+                        <p class="alt_yazi">Devam ederek Pinterest'in <b>Hizmet Şartları </b>koşullarını kabul etmiş ve <b>Gizlilik Politikası</b> metnini okuduğunuzu onaylamış olursunuz. 
+                            <b>Veri toplama bildirimi.</b></p> 
+                            <p class="alt_yazi" >Zaten üye misiniz?<a  style="color:rgb(84, 83, 83);" href="{% url 'login' %}"><b>Oturum aç</b></a></p>                            
                 </div>   
             </div>
         </div>
     </div>
 </div>
 {% endblock content %}
-
-
+</div>

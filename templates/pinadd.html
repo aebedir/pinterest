@@ -1,25 +1,74 @@
 {% extends 'index.html' %}
 {% load static %}
+{% block css %}
+<!-- My CSS -->
+<link rel="stylesheet" href="{% static 'css/pinadd.css' %}">
+{% endblock css %}
 
-  
     {% block content %}
     {% if user.is_authenticated %}
-        <div class="container mt-5">
-            <form action="" method="POST" enctype="multipart/form-data" class="w-50 m-auto border p-3">
-                {% csrf_token %}
-                {{form}}
-                {{form.media}}
-                <input type="submit" value="Ekle" class="btn btn-primary mt-2">                
-            </form>
+        <div class="container">
+            <div class="i">
+                <i class="fa-solid fa-ellipsis fa-xl ms-5"></i>
+                </div>
+          <div class="cntnr">
+            
+            <div class="col-6 detail-left">
+                <div class="yazi">
+                    <div class="metin" style="text-align: center; padding-top: 170px;">Yüklemek için sürükleyip bırakın veya tıklayın.</div>
+                    <div class="icon">
+                        <svg class="gUZ ztu U9O kVc" height="24" width="24" viewBox="0 0 24 24" aria-label="Bir görüntü veya video ekle" role="img">
+                            <path d="M24 12c0-6.627-5.372-12-12-12C5.373 0 0 5.373 0 12s5.373 12 12 12c6.628 0 12-5.373 12-12zm-10.767 3.75a1.25 1.25 0 0 1-2.5 0v-3.948l-1.031 1.031a1.25 1.25 0 0 1-1.768-1.768L12 7l4.066 4.065a1.25 1.25 0 0 1-1.768 1.768l-1.065-1.065v3.982z"></path>
+                        </svg>
+                    </div>
+                    <div class="alt-yazi">
+                        <div class="alt-yazi1">Öneri: Yüksek kaliteli .jpg formatında 20 MB'den küçük dosyalar kullanın</div>
+                    </div>
+                </div>
+                <input aria-label="Dosya yükleme" id="media-upload-input-713f7e5f-aa8d-463e-879b-f4153a6a8fed" 
+                data-test-id="media-upload-input-713f7e5f-aa8d-463e-879b-f4153a6a8fed" type="file" 
+                accept="image/bmp,image/gif,image/jpeg,image/png,image/tiff,image/webp" aria-hidden="false" 
+                tabindex="0" 
+                style="cursor: pointer; height: 100%; opacity: 0; position: absolute; width: 100%; left: 0px; top: 0px; font-size: 0px;">
+            </div>
+            <div class="button">
+                <p id="result"></p>
+                <div id="getDiv">Siteden kaydet</div>
+            </div>
+            <script>
+                var getDiv=document.querySelector('#getDiv');
+                getDiv.onclick=function(){
+                    document.querySelector('#getDiv').innerHTML="Web sitesi girin";
+                }
+            </script>
+            <div class="detail-right" style="float: right; width: 40%;">
+                <div class="text_area">
+                    <textarea name="" class="pin-title" placeholder="Başlığınızı ekleyin" style="height: 62px; font-size: 36px; font-weight: 700;"  rows="1"></textarea>
+                </div>
+                <div class="text_area">
+                    <textarea name="" class="pin-aciklama" placeholder="Pininizin ne hakkında olduğunu herkese söyleyin" style="height: 45px;"  rows="1"></textarea>
+                </div>
+                <!-- Emoji -->
+                <div class="emoji">
+                    <div aria-disabled="false" aria-label="Bir emoji seçin" class=" " role="button" tabindex="0">
+                        <div class="smile" style="font-size: 24px; height: 40px; width: 40px;">😃</div>
+                    </div>
+            </div>
+                <div class="button">
+                    <button  type="button" class="btn " tabindex="0" style=" background-color:rgba(235, 234, 234, 0.773); font-weight: 600; width:265px; height: 45px;">
+                        Alternatif metin ekle
+                    </button>
+                </div>
+                <div class="text_area">
+                    <textarea name="" class="pin-bottom" placeholder="Bir hedef bağlantı ekleyin" style="height: 36px; font-size: 18px; "  rows="1"></textarea>
+                </div>
+             </div>
+          </div>
+        
         </div>
+
         {% else %}
-            <h3 class="text-center mt-5 ">Bu sayfa için yetkiniz bulunmamaktadır.</h3>
-            <h4 class="text-center mt-5 ">Ana sayfaya dönmek için lütfen<a href="{% url 'index' %}"> buraya </a>tıklayınız</h4>
+            <h3 class="text-center ">Bu sayfa için yetkiniz bulunmamaktadır.</h3>
+            <h4 class="text-center ">Ana sayfaya dönmek için lütfen<a href="{% url 'index' %}"> buraya tıklayınız </a></h4>
         {% endif %}
     {% endblock content %}
-
-
-
-
-
-

@@ -10,37 +10,41 @@
    
    {% if user.is_authenticated %}
    <div class="menu">
-    <label for="" class="logo" >
-       <a href="">
+    <label >
+       <a href="{% url 'index' %}">
          <img src="/static/img/pinterestlogo.jpg"   alt="">
        </a>
      </label>
-
-        <button type="button" style="width: 100px; height: 50px;" class="btn btn-dark">Anasayfa</button>
-       
+<a href="{% url 'index' %}">
+        <button type="button" style="width: 105px; height: 47px; background-color: black; color: white; margin-top: 19px; margin-left: 12px;" class="btn">Ana Sayfa</button>
+       </a>
         <button class="btn btn-light" style="margin-top: 25px; width: 70px; height: 35px; background-color: white;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Oluştur
         </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Fikir Pini Oluştur</a></li>
-          <li><a class="dropdown-item" href="#">Pin Oluştur</a></li>
+          <li><a class="dropdown-item" href="pinadd/">Pin Oluştur</a></li>
         </ul>
         <form class="d-flex" role="search">
-       <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search">
+       <input class="form-control me-2"  style="background-color: rgba(235, 234, 234, 0.773); " type="search" placeholder="Search" aria-label="Search">
       </form>
       <div class="dropdown">
         <button class="btn">
-          <img class="image" src="/static/img/Ekran görüntüsü 2023-08-18 160455.png" style="width: 40px; height: 45px;" alt="">
+          <img class="image" src="/static/img/Ekran görüntüsü 2023-08-18 160455.png" style="width: 35px; height: 40px;" alt="">
         </button>
       </div>
       <div class="dropdown">
         <button class="btn">
-          <img class="image" src="/static/img/Ekran görüntüsü 2023-08-18 203354.png "  style="width: 50px; height: 45px; margin: 0;" alt="">
+          <img class="image" src="/static/img/Ekran görüntüsü 2023-08-18 203354.png "  style="width: 45px; height: 45px;" alt="">
         </button>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" style="background-color: white; border: none; color: rgba(152, 150, 150, 0.963); width: 55px; height: 55px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        </button>
+      </div>    
+        <div class="user">
+          <input type="hidden" name="userId" value="{{user.id}}">
+         <li  class="username"><a href="{% url 'hesap-detay' user.id %}" class="user_upper" >{{ user.username.0|upper }}</a></li>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" style="background-color: white; border: none; color: rgba(152, 150, 150, 0.963); width: 55px; height: 55px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Hesap ekle</a></li>
           <li><a class="dropdown-item" href="#">İşletme hesabına geçiş yapın</a></li>
@@ -54,6 +58,7 @@
           <li><a class="dropdown-item" href="#">Beta test kullanıcısı olun</a></li>
           <li><a onclick="exit(event)"  class="dropdown-item" href="{% url 'logout' %}">Çıkış yap</a></li>
         </ul>
+        </div>
       </div>
     </div>
    <script>
@@ -64,28 +69,24 @@
     }  
   </script>
    {% else %}
-   <nav>
-    <label for="" class="logo" >
-       <a href="">
-         <img src="/static/img/pinterestlogo.jpg" alt="">
-         <ul><li><h1>Pinterest</h1></li></ul>
-       </a>
-       
-     </label>
-       
-    <ul>
-       <li><a href="">Hakkında</a></li>
-       <li><a href="">İş Dünyası</a></li>
-       <li><a href="">Blog</a></li>
-    </ul>
-    <ul>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end" >
-        <button class="btn btn-danger me-md-2" type="button"><a  href="{% url 'login' %}" style="text-decoration: none;">Oturum Aç</a></button>
+   <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid mt-3">
+      <div for="" class="logo" >
+        <a href="{% url 'index' %}">
+          <img src="/static/img/logo.png"  alt="">
+        </a>
+      </div>      
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="#">Hakkında</a>
+          <a class="nav-link mx-3" href="#">İş Dünyası</a>
+          <a class="nav-link" href="#">Blog</a>   
+          <a class="nav-link btn btn-danger mt-0 " href="{% url 'login' %}" style="color:white;">Oturum Aç</a>
+          <a class="nav-link btn btn-secondary mt-0" href="{% url 'register' %}" style="color:white;">Kaydol</a>     
+        </div>
+        
+        
       </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-secondary" type="button"><a  href="{% url 'register' %}" style="text-decoration: none;">Kaydol</a></button>
-      </div>
-    </ul>
-   </nav>
+    </div>
+  </nav> 
    {% endif %}
- 

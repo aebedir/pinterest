@@ -1,0 +1,103 @@
+body{
+    background-color: rgba(235, 234, 234, 0.773); 
+}
+.container{
+    width: 58%;
+    background-color: white;
+    border-radius: 16px;
+    padding-top: 30px;
+    height: 700px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.col-6{
+    border-radius: 8px;
+    background-color: rgba(235, 234, 234, 0.773); 
+    width: 281px; 
+    height: 500px;
+    padding-top: 15px;
+}
+div{
+    display: block;
+}
+.cntnr{
+    padding-left: 30px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    width: 950px;
+    
+}
+.yazi{
+    width: 175px; 
+    border: 2px dashed rgba(203, 203, 203, 0.773); 
+    border-radius: 6px; 
+    width: 250px; 
+    height: 465px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+.metin{
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.icon{
+    margin-top: -95px;
+    margin-left: 75px;
+}
+.alt-yazi{
+    margin-top: 215px;
+    text-align:center;
+    font-size: 12px;
+}
+.i{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #5f5f5f;
+    margin-left: 35px;
+    
+}
+.detail-right{
+    margin-top: -500px;
+    margin-right: 225px;
+}
+textarea{
+    width: 450px;
+    border:none;
+    resize: none;
+    white-space: pre-wrap;
+    overflow: hidden;
+    background-color: transparent;
+    border-bottom: solid rgba(203, 203, 203, 0.784); 
+}
+
+
+.button{
+    margin-left: -10px;
+    margin-top: 10px;
+}
+.pin-aciklama{
+    margin-top: 115px;
+}
+.pin-bottom{
+    margin-top: 165px;
+}
+.emoji{
+    margin-top: -55px;
+    margin-left: 410px;
+   
+}
+#getDiv{
+    width: 275px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: rgba(235, 234, 234, 0.773); 
+    padding-left: 75px;
+    padding-top: 11px;
+    margin-left: 12px;
+    font-weight: 600;
+}

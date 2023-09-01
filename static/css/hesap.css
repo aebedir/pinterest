@@ -32,3 +32,12 @@
     padding: 10px ;
     font-weight: bold;
 }
+.hesap-img{
+    border-radius: 15px;
+    max-height: 300px;
+    max-width: 250px;
+}
+.card{
+    border: 0 !important;
+    padding-top: 7px;
+}

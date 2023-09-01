@@ -49,9 +49,17 @@
 
 
 {% if post|length > 0 %}
-{% for p in post %}
-<img src="{{p.resim.url}}" alt="">
-{% endfor %}
+<div class="container mt-3">
+    <div class="row">
+        {% for p in post %}
+        <div class="col-3">            
+            <div class="card">
+                <img class="hesap-img" src="{{p.resim.url}}" alt="">
+            </div>     
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% else %}
 <h3>Henüz Pin Eklemediniz</h3>
 {% endif %}

@@ -18,15 +18,12 @@ def index(request):
 
 def userRegister(request):  
     if request.method == 'POST':
-        kullanici = request.POST['kullanici']
-        email = request.POST['email']
-        ad = request.POST['ad']        
-        soyad = request.POST['soyad']
-        telefon = request.POST['telefon']        
+        kullanici = request.POST['email']
+        email = request.POST['email']               
         sifre = request.POST['sifre']
-        sifre2 = request.POST['sifre2']
+        date = request.POST['date']
 
-        if sifre == sifre2:
+        if sifre == sifre:
             if User.objects.filter(username = kullanici).exists():
                 messages.error(request,'Kullanıcı Adı Mevcut')
             elif User.objects.filter(email = email).exists():
@@ -43,9 +40,7 @@ def userRegister(request):
                 )
                 Hesap.objects.create(
                     user = user, 
-                    ad = ad,
-                    soyad = soyad,                   
-                    telefon = telefon                    
+                    tarih = date                   
                 )
                 user.save()
                 messages.success(request,'Kayıt Başarılı , Giriş Yapabilirsiniz')

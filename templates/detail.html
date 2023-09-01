@@ -38,7 +38,7 @@
                     <div>
                         {% if not hesap.profilResmi %}
                         <div>
-                            <h1 class="hesap-isim">{{hesap.user}}</h1>
+                            <h1 class="hesap-isim">{{hesap.user.username.0|upper}}</h1>
                         </div>
                         {% else %}
                         <img width="50px;" src="{{hesap.profilResmi.url}}" alt=""> 
