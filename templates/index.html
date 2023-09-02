@@ -22,6 +22,7 @@
             ScrollReveal({ reset: true });
     </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>    
     {% include 'includes/_Header.html' %}
@@ -42,6 +43,40 @@
     
     {% else %}
     <div class="else-index">
+        <!-- Kayan yazı animasyonu -->
+        <div class="title1 mt-5">
+            <h1>Sıradaki fikri bulun</h1>
+        </div>
+        <div class="container1">
+            <div class="row w-100">
+                <div class="offset-lg-2  col-lg-8">
+                    <span class="slider-content d-none content1 active" style="color: darkgoldenrod; text-align: center;">hafta içi akşam yemeği fikri</span>
+                </div>
+                <div class="offset-lg-2 col-lg-8 ">
+                    <span class="slider-content d-none content2" style="color: rgb(97, 140, 123); text-align: center;">ev dekorasyonu fikri</span>
+                </div>
+                <div class="offset-lg-2 col-lg-8">
+                    <span class="slider-content d-none content3" style="color: rgb(0, 118, 211); text-align: center;">yeni giyim stili</span>
+                </div>
+                <div class="offset-lg-2 col-lg-8">
+                    <span class="slider-content d-none content4" style="color: rgb(64, 122, 87); text-align: center;">bahçecilik fikri</span>
+                </div>
+            </div>
+            <div class="scroller">
+                <ul class="slider-ul" style="display: flex;">
+                    <li class="slider-button step1 activeStep"  style="list-style-type: none; background-color: darkgoldenrod;">
+                    </li>
+                    <li class="slider-button step2" style="list-style-type: none;">
+                    </li>
+                    <li class="slider-button step3"  style="list-style-type: none;">
+                    </li>
+                    <li class="slider-button step4"  style="list-style-type: none;">
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
         <div id="top" class="d-flex">            
             <div data-aos="fade-up"
             data-aos-duration="600" class="top" style="margin-top:280px">                
@@ -75,71 +110,98 @@
                 <img src="{% static 'img/3b42b02bf047097582b26401df90cdb3.jpg ' %}" style="border-radius: 16px;" alt="">              
             </div> 
         </div>
+
         <div id="search">
+            <div class="row w-100">
+                <div class="col-5 search-left">
+                    <img src="{% static 'img/sari.png' %}" alt="">
+                </div>
+                <div class="col-2">
+
+                </div>
+                <div class="col-5 search-right">
+                    <h2>Bir fikir arayın</h2>
+                    <p>Şimdi ne denemek istersiniz? "Kolay tavuk yemeği" gibi ilgilendiğiniz bir şey düşünün ve neler bulacağınız bakın.</p>
+                    <button>keşfet</button>
+                </div>
+            </div>
             
         </div>
         <div id="save">
-            
+            <div class="row w-100">
+                <div class="col-5 save-left">
+                    <h2>Beğendiğiniz fikirleri kaydedin.</h2>
+                    <p>En beğendiğiniz fikirlere daha sonra geri dönmek için kaydedin.</p>
+                    <button>keşfet</button>
+                </div>                
+                <div class="col-7 save-right">
+                    <img src="{% static 'img/mavi.png' %}" alt="">
+                </div>
+            </div>
         </div>
         <div id="shop">
-
-        </div>
-        <div id="bottom">
-            <div class="row">
-                <div class="col-3">
-
+            <div class="row w-100">
+                <div class="col-6 shop-left">
+                    <img src="{% static 'img/pembe.png' %}" alt="">
                 </div>
-                <div class="col-7 mt-4">
-                    <div class="mt-1 mb-1">   
-                        <div class="login-wrap">
-                            <div class="login-html">
-                                <label for="" style="margin-top: 13px; margin-left: 203px;">
-                                    <img src="/static/img/pinterestlogo.jpg" class="logo"  alt="">
-                                </label>
-                                <div class="title">
-                                <h3 style="text-align: center;">Pinterest'e Hoş Geldiniz</h3>
-                                <p style="color: rgb(96,96,96); text-align: center;">Bir sonraki tutkunuzu keşfedin</p>
-                            </div>
-                                <div class="login-form">
-                                    <div class="sign-up-htm">
-                                        <form action="" method="POST">
-                                        {% csrf_token %}
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="group">
-                                                    <label class="label">E-posta</label>
-                                                    <input name="email"  type="email" class="input">
-                                                </div>
-                                                <div class="group">
-                                                    <label class="label">Parola</label>
-                                                    <input name="sifre" type="password" class="input">
-                                                </div>
-                                                <div class="group">
-                                                    <label class="label">Doğum tarihi</label>
-                                                    <input name="date"  type="date" class="input">
-                                                </div>                           
-                                                
+                <div class="col-6 shop-right">
+                    <h2>Gör, üret, dene, yap</h2>
+                    <p>Pinterest'in en iyi yanı dünyanın her yerindeki kullanıcılardan yeni şeyler ve fikirler keşfetmek.</p>
+                    <button>keşfet</button>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">   
+            <div class="mt-4">
+                <div class="mt-1 mb-1">   
+                    <div class="login-wrap">
+                        <div class="login-html">
+                            <label for="" style="margin-top: 13px; margin-left: 203px;">
+                                <img src="/static/img/pinterestlogo.jpg" class="logo"  alt="">
+                            </label>
+                            <div class="title">
+                            <h3 style="text-align: center;">Pinterest'e Hoş Geldiniz</h3>
+                            <p style="color: rgb(96,96,96); text-align: center;">Bir sonraki tutkunuzu keşfedin</p>
+                        </div>
+                            <div class="login-form">
+                                <div class="sign-up-htm">
+                                    <form action="" method="POST">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="group">
+                                                <label class="label">E-posta</label>
+                                                <input name="email"  type="email" class="input">
                                             </div>
+                                            <div class="group">
+                                                <label class="label">Parola</label>
+                                                <input name="sifre" type="password" class="input">
+                                            </div>
+                                            <div class="group">
+                                                <label class="label">Doğum tarihi</label>
+                                                <input name="date"  type="date" class="input">
+                                            </div>                           
+                                            
                                         </div>
-                                        <div class="group">
-                                            <input type="submit" class="button" value="Devam et">
-                                        </div>           
-                                        <h6 style="margin-left: 235px;">VEYA</h6>
-                                        <div class="group" style="margin-left: 113px;">
-                                            <input type="submit" class="btn btn-primary" value="Facebook ile Devam Et">
-                                        </div>      
-                                        </form>            
-                                        <div class="yazi">              
-                                            <p class="alt_yazi">Devam ederek Pinterest'in <b>Hizmet Şartları </b>koşullarını kabul etmiş ve <b>Gizlilik Politikası</b> metnini okuduğunuzu onaylamış olursunuz. 
-                                                <b>Veri toplama bildirimi.</b></p> 
-                                                <p class="alt_yazi" >Zaten üye misiniz?<a  style="color:rgb(84, 83, 83);" href="{% url 'login' %}"><b>Oturum aç</b></a></p>                            
-                                    </div>   
-                                </div>
+                                    </div>
+                                    <div class="group">
+                                        <input type="submit" class="button" value="Devam et">
+                                    </div>           
+                                    <h6 style="margin-left: 235px;">VEYA</h6>
+                                    <div class="group" style="margin-left: 113px;">
+                                        <input type="submit" class="btn btn-primary" value="Facebook ile Devam Et">
+                                    </div>      
+                                    </form>            
+                                    <div class="yazi">              
+                                        <p class="alt_yazi">Devam ederek Pinterest'in <b>Hizmet Şartları </b>koşullarını kabul etmiş ve <b>Gizlilik Politikası</b> metnini okuduğunuzu onaylamış olursunuz. 
+                                            <b>Veri toplama bildirimi.</b></p> 
+                                            <p class="alt_yazi" >Zaten üye misiniz?<a  style="color:rgb(84, 83, 83);" href="{% url 'login' %}"><b>Oturum aç</b></a></p>                            
+                                </div>   
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>       
         </div>
     </div>
     
@@ -150,13 +212,14 @@
 
 
     
-    {% block script %}   
-    {% endblock script %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script> ScrollReveal().reveal('.box');</script>   
+    {% block script %}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+      </script>   
+    {% endblock script %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="{% static 'js/slider.js' %}"></script>
+    
 </body>
 </html>
