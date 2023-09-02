@@ -10,11 +10,11 @@
    
    {% if user.is_authenticated %}
    <div class="menu">
-    <label >
+    <header >
        <a href="{% url 'index' %}">
          <img src="/static/img/pinterestlogo.jpg"   alt="">
        </a>
-     </label>
+      </header>
 <a href="{% url 'index' %}">
         <button type="button" style="width: 105px; height: 47px; background-color: black; color: white; margin-top: 19px; margin-left: 12px;" class="btn">Ana Sayfa</button>
        </a>
@@ -81,12 +81,18 @@
           <a class="nav-link" href="#">Hakkında</a>
           <a class="nav-link mx-3" href="#">İş Dünyası</a>
           <a class="nav-link" href="#">Blog</a>   
-          <a class="nav-link btn btn-danger mt-0 " href="{% url 'login' %}" style="color:white;">Oturum Aç</a>
-          <a class="nav-link btn btn-secondary mt-0" href="{% url 'register' %}" style="color:white;">Kaydol</a>     
+          <button class="nav-link btn btn-danger mt-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="color:white;">Oturum Aç</button>
+          <a class="nav-link btn btn-secondary mt-0"  href="{% url 'register' %}" style="color:white;">Kaydol</a>     
         </div>
         
         
       </div>
     </div>
   </nav> 
+
+
+    
+
+   
+
    {% endif %}

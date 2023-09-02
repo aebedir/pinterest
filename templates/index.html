@@ -204,6 +204,63 @@
             </div>       
         </div>
     </div>
+
+  
+  <!-- Modal -->
+  <a href="{% url 'login' %}">
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <label for="" style="margin-top: 13px; margin-left: 203px;">
+                <img src="/static/img/pinterestlogo.jpg" class="logo"  alt="">
+            </label>
+            <div class="title">
+            <h3 style="text-align: center;">Pinterest'e Hoş Geldiniz</h3>
+            <p style="color: rgb(96,96,96); text-align: center;">Bir sonraki tutkunuzu keşfedin</p>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="login-form">                
+                <div class="sign-in-htm">
+                    <h3 style="text-align: center;">Pinterest'e Hoş Geldiniz</h3>
+                    <form action="" method="POST">                        
+                    {% csrf_token %}                    
+                    <div class="group">
+                        <label class="label">E-posta</label> <br>
+                        <input name="kullanici" type="email" class="input">
+                    </div>
+                    <div class="group">
+                        <label class="label">Parola</label> <br>
+                        <input name="sifre" type="password" class="input" data-type="password">
+                    </div>          
+                    <div class="foot-lnk">
+                        <a class="parola">Parolanızı mı unuttunuz ?</a>
+                    </div>              
+                    <div class="group">
+                        <input type="submit" class="button" value="Oturum aç">
+                    </div>
+                    <h6 style="margin-left: 235px;">VEYA</h6>
+                    <div class="group" style="margin-left: 113px;">
+                        <input type="submit" class="btn btn-primary" value="Facebook ile Devam Et">
+                    </div>
+                    </form>       
+                    <div class="yazi">              
+                    <p class="alt_yazi">Devam ederek Pinterest'in <b>Hizmet Şartları </b>koşullarını kabul etmiş ve <b>Gizlilik Politikası</b> metnini okuduğunuzu onaylamış olursunuz. 
+                        <b>Veri toplama bildirimi.</b></p>
+                        <hr>
+                    <p class="alt_yazi"><b>Hala Pinterest'te değil misiniz? Kaydolun</b><br>
+                        İşletme misiniz?
+                        Buradan başlayın!
+                        </p>
+                    </div>   
+                </div>
+            </div>   
+        </div>        
+      </div>
+    </div>
+  </div>
+</a>
     
     {% endif %}
     

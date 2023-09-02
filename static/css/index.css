@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background-color: white;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 
@@ -34,31 +34,128 @@ body, html {
 }
 #search{    
     position: relative;
-    top: 85vh;
+    top: 55vh;
     z-index: 100;
-    background-image: url(../img/sari.png);
-    background-position: center;
-    background-size: cover;    
+    background-color:rgb(255, 253, 146) ;
+}
+.search-left{
+    margin-top: 50px;
+}
+.search-left img{
+    margin-left: 100px;
+}
+.search-right{
+    margin-top: 250px;    
+}
+.search-right h2 {
+    font-size: 60px;
+    color: rgb(195, 25, 82);
+    font-weight: bold;    
+}
+.search-right p{
+    max-width: 400px;
+    font-size: 24px;
+    color: rgb(195, 25, 82);
+    text-align: center;    
+}
+.search-right button{
+    height: 38px;
+    min-width: 93px;
+    background: rgb(195, 25, 82);
+    color: rgb(255, 253, 158);
+    font-size: 16px;
+    margin-left: 32%;
+    font-weight: bold;
+    border-radius: 35px;   
+    border: none; 
+    outline: none;      
 }
 #save{
     position: relative;
-    top: 85vh;
-    background-image: url(../img/mavi.png);
-    background-position: center;
-    background-size: cover;
+    top: 55vh;
+    background-color: rgb(218, 255, 246);
+}
+.save-left {
+    margin-top:250px ;
+    padding-left: 50px;
+}
+.save-left h2{
+    color: rgb(0, 107, 108);   
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+.save-left p{
+    width: 350px;
+    margin: auto;
+    font-size: 24px;
+    color: rgb(0, 107, 108);
+    text-align: center;    
+}
+.save-left button{
+    height: 38px;
+    min-width: 93px;
+    background: rgb(0, 107, 108);
+    color: rgb(204, 246, 238);;
+    font-size: 16px;
+    margin-left: 42%;
+    margin-top: 15px;
+    font-weight: bold;
+    border-radius: 35px;   
+    border: none; 
+    outline: none;
+}
+.save-right{
+    margin-top: 40px;
+}
+.save-right img{
+    width: 90%;
 }
 #shop{
     position: relative;
-    top: 85vh;
-    background-image: url(../img/pembe.png);
-    background-position: center;
-    background-size: cover;
+    top: 55vh;
+    background-color: rgb(255, 226, 235)
+}
+.shop-right{
+    margin-top: 250px;
+    padding-left: 200px;
+}
+.shop-right h2{
+    width: 420px;
+    font-size: 60px;
+    color: rgb(195, 47, 0);
+    font-weight: bold;
+    text-align: center;    
+}
+.shop-right p{
+    max-width: 420px;
+    font-size: 24px;
+    color: rgb(195, 47, 0);
+    text-align: center;    
+}
+.shop-right button {
+    height: 38px;
+    min-width: 93px;
+    background: rgb(195, 47, 0);
+    color: rgb(255, 223, 233);
+    font-size: 16px;
+    margin-left: 32%;
+    margin-top: 15px;
+    font-weight: bold;
+    border-radius: 35px;   
+    border: none; 
+    outline: none;
+}
+.shop-left img{
+    width: 105%;
 }
 #bottom{    
     position: relative;
-    top: 85vh;
+    top: 52vh;
     background-image:linear-gradient( rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
-    url(../img/background.png); ;
+    url(../img/background.png); 
+    padding-left: 400px;
+    padding-top: 20px;
     
 }
 .top img{
@@ -67,7 +164,83 @@ body, html {
     z-index: -100;
     object-fit: cover;
 }
+li {
+    background: rgb(225, 225, 225);
+    display: inline-block;
+    padding: 5px;
+    height: 10px;
+    border-radius: 50px;
+    margin: 6px;
+    outline: none;
+    border-style: none;
+}
+.scroller{
+    margin-left: 45%;    
+    position: absolute;    
+    z-index: 1;
+}
+.title1{
+    width: 650px;
+    margin-left: 535px;
+}
+.title1 h1{
+    font-size: 55px;
+}
 
+.slider-content{
+    font-size: 55px;
+}
+.slider-button{
+    z-index:999;
+}
+.active{
+    display: block !important;
+    animation: 10s ease 0s normal forwards 1 fadein;
+}
+.slider-content{
+    opacity:0;
+
+}
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0.5; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0.5; }
+    100% { opacity:1; }
+}
+@keyframes animasyon{
+    0% {
+        transform: translateY(100px);
+        opacity: 1;
+    }
+    10% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    0% {
+        transform: translateY(100px)
+    }
+    30% {
+        transform: translateY(0px);
+        opacity:1;
+    }
+    40% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(-100px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0.5;
+    }
+}
 
 /* --------------------------------------------------------------------------- */
 @media(max-width:1200px){
