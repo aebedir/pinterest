@@ -23,9 +23,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index,name='index'),
-    path('register/',userRegister, name='register'),
-    path('login/',userLogin,name='login'),
+    path('',index,name='index'),    
     path('logout/',userLogout, name='logout'),
     path('hesabım/',hesap,name='hesap'),
     path('hesap-detay/<int:userId>',hesapDetay,name="hesap-detay"),

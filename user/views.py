@@ -9,61 +9,58 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
+    
+    if request.method=="POST":
+        if  'oturumac' in request.POST:
+            kullanici = request.POST['email']
+            sifre = request.POST['sifre']
+
+            user = authenticate(request, username = kullanici , password=sifre)
+
+            if user is not None:
+                login(request,user)
+                messages.success(request,'Başarıyla Giriş Yapıldı')
+                return redirect('index')             
+            else:
+                messages.error(request,'Kullanıcı Adı veya Şifre Hatalı')
+                return redirect('index') 
+        else:
+            kullanici = request.POST['email']
+            email = request.POST['email']               
+            sifre = request.POST['sifre']
+            date = request.POST['date']
+
+            if sifre == sifre:
+                if User.objects.filter(username = kullanici).exists():
+                    messages.error(request,'Kullanıcı Adı Mevcut')
+                elif User.objects.filter(email = email).exists():
+                    messages.error(request,'Email daha önce kullanılmış')
+                elif len(sifre)<6:
+                    messages.error(request,'Şifre 6 karakterden uzun olmalıdır')
+                elif kullanici.lower() in sifre.lower():
+                    messages.error(request,'Kullanıcı adı ile şifre benzer olamaz')
+                else:
+                    user = User.objects.create_user(
+                        username = kullanici,
+                        email = email,
+                        password=sifre
+                    )
+                    Hesap.objects.create(
+                        user = user, 
+                        tarih = date                   
+                    )
+                    user.save()
+                    messages.success(request,'Kayıt Başarılı , Giriş Yapabilirsiniz')
+                    return redirect('index')
+            else:
+                messages.error(request,'Şifreler Uyuşmuyor')  
+        messages.success(request,'Kayıt Başarılı Giriş Yapabilrsiniz')  
     pin = Post.objects.all()
     context={
         'pin':pin                
     }
     return render (request,'index.html',context)
 
-
-def userRegister(request):  
-    if request.method == 'POST':
-        kullanici = request.POST['email']
-        email = request.POST['email']               
-        sifre = request.POST['sifre']
-        date = request.POST['date']
-
-        if sifre == sifre:
-            if User.objects.filter(username = kullanici).exists():
-                messages.error(request,'Kullanıcı Adı Mevcut')
-            elif User.objects.filter(email = email).exists():
-                messages.error(request,'Email daha önce kullanılmış')
-            elif len(sifre)<6:
-                messages.error(request,'Şifre 6 karakterden uzun olmalıdır')
-            elif kullanici.lower() in sifre.lower():
-                messages.error(request,'Kullanıcı adı ile şifre benzer olamaz')
-            else:
-                user = User.objects.create_user(
-                    username = kullanici,
-                    email = email,
-                    password=sifre
-                )
-                Hesap.objects.create(
-                    user = user, 
-                    tarih = date                   
-                )
-                user.save()
-                messages.success(request,'Kayıt Başarılı , Giriş Yapabilirsiniz')
-                return redirect('login')
-        else:
-            messages.error(request,'Şifreler Uyuşmuyor')
-    return render(request,'register.html')
-
-def userLogin(request):    
-    if request.method=="POST":
-        kullanici = request.POST['kullanici']
-        sifre = request.POST['sifre']
-
-        user = authenticate(request, username = kullanici , password=sifre)
-
-        if user is not None:
-            login(request,user)
-            messages.success(request,'Başarıyla Giriş Yapıldı')
-            return redirect('index')             
-        else:
-            messages.error(request,'Kullanıcı Adı veya Şifre Hatalı')
-            return redirect('login')
-    return render(request,'login.html')
 
 def userLogout(request):        
     logout(request)

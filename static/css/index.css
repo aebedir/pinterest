@@ -203,6 +203,16 @@ body, html {
     opacity:0;
 
 }
+.modal-content {
+    border-radius: 22px;    
+}
+#oturumac{
+    display: none;
+}
+#kaydol{
+    display: none;
+}
+
 @keyframes fadein{
     0% { opacity:0; }
     66% { opacity:0.5; }
