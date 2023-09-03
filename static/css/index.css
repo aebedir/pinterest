@@ -34,7 +34,7 @@ body, html {
 }
 #search{    
     position: relative;
-    top: 55vh;
+    top: 60vh;
     z-index: 100;
     background-color:rgb(255, 253, 146) ;
 }
@@ -72,7 +72,7 @@ body, html {
 }
 #save{
     position: relative;
-    top: 55vh;
+    top: 60vh;
     background-color: rgb(218, 255, 246);
 }
 .save-left {
@@ -113,7 +113,7 @@ body, html {
 }
 #shop{
     position: relative;
-    top: 55vh;
+    top: 60vh;
     background-color: rgb(255, 226, 235)
 }
 .shop-right{
@@ -182,6 +182,7 @@ body, html {
 .title1{
     width: 650px;
     margin-left: 535px;
+    margin-top: 150px;
 }
 .title1 h1{
     font-size: 55px;
