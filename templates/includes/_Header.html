@@ -43,8 +43,8 @@
          <li  class="username"><a href="{% url 'hesap-detay' user.id %}" class="user_upper" >{{ user.username.0|upper }}</a></li>
         </div>
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" style="background-color: white; border: none; color: rgba(152, 150, 150, 0.963); width: 55px; height: 55px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          </button>
+          <a class="dropdown-toggle p-1" style="background-color: white; margin-left:15px; text-decoration:none; border: none; color: rgba(152, 150, 150, 0.963); width: 55px; height: 55px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Hesap ekle</a></li>
           <li><a class="dropdown-item" href="#">İşletme hesabına geçiş yapın</a></li>
@@ -70,13 +70,13 @@
   </script>
    {% else %}
    <nav class="navbar navbar-expand-lg ">
-    <div class="d-flex align-items-center w-100 mt-1">
-      <div class="logo mt-3" >
+    <div class="d-flex align-items-center w-100 mt-3">
+      <div class="logo mt-1" >
         <a href="{% url 'index' %}">
           <img src="/static/img/logo.png"  alt="">
         </a>
       </div>      
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse mt-1" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="#">Hakkında</a>
           <a class="nav-link mx-3" href="#">İş Dünyası</a>
