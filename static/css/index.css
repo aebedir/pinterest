@@ -212,6 +212,12 @@ body, html {
 #kaydol{
     display: none;
 }
+#oturumac2{
+    display: none;
+}
+#kaydol2{
+    display: none;
+}
 
 @keyframes fadein{
     0% { opacity:0; }

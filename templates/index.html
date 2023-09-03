@@ -153,8 +153,56 @@
         </div>
         <div id="bottom">   
             <div class="mt-4">
-                <div class="mt-1 mb-1">   
-                    <div class="login-wrap">
+                <div class="mt-1 mb-1">  
+
+                    <div id="oturumac2" class="login-wrap m-0 d-block ">
+                        <div class="login-html">
+                            <label for="" style="margin-top: 17px; margin-left: 208px;">
+                                <img src="/static/img/pinterestlogo.jpg" class="logo" alt="">
+                            </label>
+                            <div class="login-form">
+                                
+                                <div class="sign-in-htm">
+                                    <h3 style="text-align: center;">Pinterest'e Hoş Geldiniz</h3>
+                                    <form action="" method="POST">
+                                        
+                                    {% csrf_token %}
+                                    
+                                    <div class="group">
+                                        <label class="label">E-posta</label> <br>
+                                        <input name="email" type="email" class="input">
+                                    </div>
+                                    <div class="group">
+                                        <label class="label">Parola</label> <br>
+                                        <input name="sifre" type="password" class="input" data-type="password">
+                                    </div>          
+                                    <div class="foot-lnk">
+                                        <a class="parola">Parolanızı mı unuttunuz ?</a>
+                                    </div>              
+                                    <div class="group">
+                                        <input type="submit" class="button" value="Oturum aç" name="oturumac">
+                                    </div>
+                                    <h6 style="margin-left: 235px;">VEYA</h6>
+                                    <div class="group" style="margin-left: 113px;">
+                                        <input type="submit" class="btn btn-primary" value="Facebook ile Devam Et">
+                                    </div>
+                                    </form>       
+                                    <div class="yazi">              
+                                    <p class="alt_yazi">Devam ederek Pinterest'in <b>Hizmet Şartları </b>koşullarını kabul etmiş ve <b>Gizlilik Politikası</b> metnini okuduğunuzu onaylamış olursunuz. 
+                                        <b>Veri toplama bildirimi.</b></p>
+                                        <hr>
+                                    <p class="alt_yazi"><b>Hala Pinterest'te değil misiniz? <a style="cursor: pointer;" onclick="myFunction3()">Kaydolun</a> </b><br>
+                                        İşletme misiniz?
+                                        Buradan başlayın!
+                                        </p>
+                                    </div>   
+                                </div>
+                            </div>       
+                        </div>    
+                    </div> 
+
+                    <!-- Bottom register-->
+                    <div id="kaydol2" class="login-wrap m-0 ">
                         <div class="login-html">
                             <label for="" style="margin-top: 13px; margin-left: 203px;">
                                 <img src="/static/img/pinterestlogo.jpg" class="logo"  alt="">
@@ -195,7 +243,7 @@
                                     <div class="yazi">              
                                         <p class="alt_yazi">Devam ederek Pinterest'in <b>Hizmet Şartları </b>koşullarını kabul etmiş ve <b>Gizlilik Politikası</b> metnini okuduğunuzu onaylamış olursunuz. 
                                             <b>Veri toplama bildirimi.</b></p> 
-                                            <p class="alt_yazi" >Zaten üye misiniz?<a  style="color:rgb(84, 83, 83);" ><b>Oturum aç</b></a></p>                            
+                                            <p class="alt_yazi" >Zaten üye misiniz?<a  onclick="myFunction2()" style="color:rgb(84, 83, 83);cursor: pointer;" ><b>Oturum aç</b></a></p>                            
                                 </div>   
                             </div>
                         </div>
@@ -334,6 +382,14 @@
         function myFunction1() {            
             document.getElementById("oturumac").classList.remove('d-block');
             document.getElementById("kaydol").classList.add('d-block');
+        }
+        function myFunction2() {            
+            document.getElementById("kaydol2").classList.remove('d-block');
+            document.getElementById("oturumac2").classList.add('d-block');
+        }
+        function myFunction3() {            
+            document.getElementById("oturumac2").classList.remove('d-block');
+            document.getElementById("kaydol2").classList.add('d-block');
         }
     </script>
 </body>
