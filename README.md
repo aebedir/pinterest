@@ -3,7 +3,7 @@
 
 <h2 align="center">Pinterest Staj Projesi</h2>
 
-<h3 align="left">Projede Yer Alan Ekip</h3>
+<h3 align="left">Proje Ekibi</h3>
 <p align="left">
 <a href="https://github.com/aebedir" target="blank">Ahmet Emin Bedir</a>
 </p>
