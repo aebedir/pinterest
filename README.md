@@ -48,7 +48,7 @@ https://github.com/aebedir/pinterest/assets/114408989/d917de7c-9c87-4056-8413-fc
 <img src="https://github.com/aebedir/pinterest/assets/114408989/82b198aa-e0ef-4be9-8e83-38d24ce747b8)" width="500" height="300"></img>
 </p>
 <p align="left">
-<img src="https://github.com/aebedir/pinterest/assets/114408989/aac41854-fb9c-4100-91b3-a3c9b3017e6d" width="550" height="300"></img>
+<img src="https://github.com/aebedir/pinterest/assets/114408989/aac41854-fb9c-4100-91b3-a3c9b3017e6d" width="500" height="300"></img>
 <img src="https://github.com/aebedir/pinterest/assets/114408989/6549c4b1-629d-423f-b93b-c1d717685a47)" width="500" height="300"></img>
 </p>
 <p align="left">
