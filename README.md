@@ -5,10 +5,10 @@
 
 <h3 align="left">Projede Yer Alan Ekip</h3>
 <p align="left">
-<a href="https://github.com/aebedir" target="blank" style="color:black;">Ahmet Emin Bedir</a>
+<a href="https://github.com/aebedir" target="blank">Ahmet Emin Bedir</a>
 </p>
 <p align="left">
-<a href="https://github.com/beyza-co/beyza" target="blank" >Beyza Nur Kaz</a>
+<a href="https://github.com/beyza-co" target="blank">Beyza Nur Kaz</a>
 </p>
 
 
@@ -38,10 +38,11 @@ https://github.com/aebedir/pinterest/assets/114408989/d917de7c-9c87-4056-8413-fc
 
 <h2 align="center">Images:</h2>
 
-
-![1](https://github.com/aebedir/pinterest/assets/114408989/0047c652-7bba-4850-95bc-8b077e63c7a3)
-![2](https://github.com/aebedir/pinterest/assets/114408989/0b5156fe-d4c5-4d2c-9e01-839d0ac7ed09)
-![3](https://github.com/aebedir/pinterest/assets/114408989/8633bf18-1e53-4498-8374-6c15065322c7)
+<p align="left">
+<img src="https://github.com/aebedir/pinterest/assets/114408989/0047c652-7bba-4850-95bc-8b077e63c7a3" width="50%" height="40"></img>
+<img src="https://github.com/aebedir/pinterest/assets/114408989/0b5156fe-d4c5-4d2c-9e01-839d0ac7ed09" width="50%" height="40"></img>
+<img src="https://github.com/aebedir/pinterest/assets/114408989/8633bf18-1e53-4498-8374-6c15065322c7" width="50%" height="40"></img>
+ </p>
 ![4](https://github.com/aebedir/pinterest/assets/114408989/82b198aa-e0ef-4be9-8e83-38d24ce747b8)
 ![5](https://github.com/aebedir/pinterest/assets/114408989/aac41854-fb9c-4100-91b3-a3c9b3017e6d)
 ![6](https://github.com/aebedir/pinterest/assets/114408989/6549c4b1-629d-423f-b93b-c1d717685a47)
