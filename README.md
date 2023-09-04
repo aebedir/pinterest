@@ -5,10 +5,10 @@
 
 <h3 align="left">Projede Yer Alan Ekip</h3>
 <p align="left">
-<a href="https://github.com/aebedir" target="blank" color="black">Ahmet Emin Bedir</a>
+<a href="https://github.com/aebedir" target="blank" style="color:black;">Ahmet Emin Bedir</a>
 </p>
 <p align="left">
-<a href="https://github.com/beyza-co/beyza" target="blank" color="black">Beyza Nur Kaz</a>
+<a href="https://github.com/beyza-co/beyza" target="blank" >Beyza Nur Kaz</a>
 </p>
 
 
