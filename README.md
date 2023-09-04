@@ -26,11 +26,9 @@
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.qt.io/" target="_blank" rel="noreferrer">   
 
 <h2 align="center">Video:</h2>
- 
 
 
-https://github.com/aebedir/pinterest/assets/114408989/067fc595-2c2e-47b5-b233-51ef8197095b
-
+https://github.com/aebedir/pinterest/assets/114408989/d917de7c-9c87-4056-8413-fc31e1c6ea50
  
 
 <h2 align="center">Images:</h2>
