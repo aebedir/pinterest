@@ -33,11 +33,11 @@
  
 
 <h2 align="center">Images:</h2>
-<div class="row">
-  <div class="col-6">
+<div display="flex" align-items="center" >
+  <div>
     ![1](https://github.com/aebedir/pinterest/assets/114408989/0047c652-7bba-4850-95bc-8b077e63c7a3)
   </div>
-   <div class="col-6">
+   <div>
      ![2](https://github.com/aebedir/pinterest/assets/114408989/0b5156fe-d4c5-4d2c-9e01-839d0ac7ed09)
    </div>
 </div>
