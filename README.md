@@ -1,9 +1,11 @@
 <h1 align="center">Hi 👋, I'm Ahmet Emin</h1>
 <h3 align="center">Full Stack Developer - Elektronics and Communucation Engineer</h3>
 
-<h2 align="center">Pinterest Staj Projesi With(<a href="https://github.com/beyza-co/beyza" target="blank">Beyza Nur Kaz</a></h2>
+<h2 align="center">Pinterest Staj Projesi</h2>
 
-
+<h2 align="center">Projede Yer Alan Ekip</h2>
+<a href="https://github.com/aebedir" target="blank">Ahmet Emin Bedir</a>
+<a href="https://github.com/beyza-co/beyza" target="blank">Beyza Nur Kaz</a>
 
 
 
