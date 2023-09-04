@@ -4,11 +4,10 @@
 <h2 align="center">Pinterest Staj Projesi</h2>
 
 <h3 align="left">Projede Yer Alan Ekip</h3>
-<br>
+<p align="left">
 <a href="https://github.com/aebedir" target="blank">Ahmet Emin Bedir</a>
-<hr>
 <a href="https://github.com/beyza-co/beyza" target="blank">Beyza Nur Kaz</a>
-
+</p>
 
 
 <h3 align="left">Connect with me:</h3>
